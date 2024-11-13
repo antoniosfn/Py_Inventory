@@ -1,0 +1,34 @@
+Aplicação na linguagem Python que mantém um catálogo de produtos e
+disponibiliza uma interface para o usuário realizar algumas operações sobre esse
+catálogo.
+Para cada produto, o catálogo contém os seguintes campos:
+a. Código: um valor inteiro
+b. Descrição: uma string
+c. Preço: um valor real
+Os dados do catálogo são mantidos somente em memória, isto é, não há
+armazenamento externo (a aplicação não usa arquivos, nem bancos de dados). Mais
+especificamente, o catálogo é implementado por meio de uma matriz, conforme o
+seguinte exemplo:
+produtos = [
+[306, 'TV LG 50', 3200.00],
+[721, 'Geladeira Brastemp 800', 7800.00],
+[485, 'Forno Eletrico GE 40', 850.00],
+[961, 'Geladeira Consul 500', 2600.00],
+[388, 'TV Philips 60', 4500.00]
+]
+A interface do usuário é bem simples e permite a escolha das seguintes operações:
+1. Listar todos os produtos do catálogo: todo o catálogo é exibido na tela do usuário,
+mostrando todos os campos de cada produto.
+2. Inserir um novo produto no catálogo: o usuário deve informar código, descrição e
+preço do novo produto. Caso seja um código já existente no catálogo, a operação
+falha.
+3. Atualizar o preço de um produto: o usuário de informar o código e novo preço do
+produto. Caso seja um código inexistente no catálogo, a operação falha.
+4. Excluir um produto do catálogo: o usuário deve informar código. Caso seja um
+código inexistente no catálogo, a operação falha.
+5. Buscar um produto de acordo com a sua descrição: o usuário deve fornecer uma
+chave (substring da descrição) para busca. Todo produto cuja descrição contém a
+chave deve ser exibido na tela do usuário.
+6. Buscar um produto de acordo com o seu preço: o usuário deve fornecer um valor
+mínimo e um valor máximo para o preço. Todo produto cujo preço pertença ao
+intervalo fornecido pelo usuário deve ser exibido na tela.
